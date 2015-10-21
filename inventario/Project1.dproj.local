@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2015/07/30 15:45:37.000.203,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/08/18 22:26:36.000.895,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/08/20 12:32:04.000.766,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/08/20 12:35:05.000.405,C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Unit1.pas</Transaction>
+    <Transaction>2015/08/20 12:35:05.000.405,C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Unit1.dfm</Transaction>
+    <Transaction>2015/08/20 12:35:08.000.109,C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Project1.dproj</Transaction>
+    <Transaction>2015/08/20 12:35:22.000.203,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Unit2.pas</Transaction>
+    <Transaction>2015/08/20 13:49:50.000.551,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Unit3.pas</Transaction>
+    <Transaction>2015/08/20 17:52:52.000.393,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\ModelSupport_Project1\default.txaPackage</Transaction>
+    <Transaction>2015/08/22 14:57:41.000.774,=C:\Users\Cristina Acosta\Documents\Embarcadero\Studio\Projects\inventario\Unit4.pas</Transaction>
+  </Transactions>
+</BorlandProject>

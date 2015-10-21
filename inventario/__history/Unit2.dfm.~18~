@@ -1,0 +1,404 @@
+object FormProduct: TFormProduct
+  Left = 0
+  Top = 0
+  Caption = 'Productos'
+  ClientHeight = 596
+  ClientWidth = 861
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = ComboBox1Change
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 19
+    Width = 37
+    Height = 13
+    Caption = 'Nombre'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 328
+    Top = 19
+    Width = 43
+    Height = 13
+    Caption = 'Cantidad'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 43
+    Width = 85
+    Height = 13
+    Caption = 'Unidad de medida'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel
+    Left = 327
+    Top = 46
+    Width = 45
+    Height = 13
+    Caption = 'Stock min'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 78
+    Width = 49
+    Height = 13
+    Caption = 'Stock max'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel
+    Left = 325
+    Top = 76
+    Width = 63
+    Height = 13
+    Caption = 'Valor unitario'
+    FocusControl = DBEdit6
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 112
+    Width = 90
+    Height = 13
+    Caption = 'Tiempo de entraga'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel
+    Left = 325
+    Top = 111
+    Width = 42
+    Height = 13
+    Caption = 'Prioridad'
+    FocusControl = DBEdit8
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 142
+    Width = 71
+    Height = 13
+    Caption = 'Tipo inventario'
+  end
+  object Label10: TLabel
+    Left = 323
+    Top = 130
+    Width = 71
+    Height = 13
+    Caption = 'Observaciones'
+    FocusControl = DBEdit10
+  end
+  object Label11: TLabel
+    Left = 8
+    Top = 176
+    Width = 54
+    Height = 13
+    Caption = 'Descripcion'
+    FocusControl = DBEdit11
+  end
+  object Label12: TLabel
+    Left = 321
+    Top = 157
+    Width = 72
+    Height = 13
+    Caption = 'Fecha creacion'
+    FocusControl = DBEdit12
+  end
+  object Label13: TLabel
+    Left = 216
+    Top = 264
+    Width = 72
+    Height = 13
+    Caption = 'tipo_inventario'
+    FocusControl = DBEdit9
+  end
+  object DBEdit1: TDBEdit
+    Left = 104
+    Top = 16
+    Width = 200
+    Height = 21
+    DataField = 'nombre'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 400
+    Top = 16
+    Width = 200
+    Height = 21
+    DataField = 'cantidad'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 104
+    Top = 43
+    Width = 200
+    Height = 21
+    DataField = 'unidad_de_medida'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 400
+    Top = 46
+    Width = 200
+    Height = 21
+    DataField = 'stock_min'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit
+    Left = 104
+    Top = 75
+    Width = 200
+    Height = 21
+    DataField = 'stock_max'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit
+    Left = 400
+    Top = 73
+    Width = 200
+    Height = 21
+    DataField = 'valor_unitario'
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object DBEdit7: TDBEdit
+    Left = 104
+    Top = 119
+    Width = 200
+    Height = 21
+    DataField = 'tiempo_de_entraga'
+    DataSource = DataSource1
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit
+    Left = 400
+    Top = 100
+    Width = 200
+    Height = 21
+    DataField = 'prioridad'
+    DataSource = DataSource1
+    TabOrder = 7
+  end
+  object DBEdit10: TDBEdit
+    Left = 400
+    Top = 127
+    Width = 200
+    Height = 21
+    DataField = 'observaciones'
+    DataSource = DataSource1
+    TabOrder = 8
+  end
+  object DBEdit11: TDBEdit
+    Left = 104
+    Top = 173
+    Width = 200
+    Height = 21
+    DataField = 'descripcion'
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBEdit12: TDBEdit
+    Left = 400
+    Top = 154
+    Width = 200
+    Height = 21
+    DataField = 'fecha_creacion'
+    DataSource = DataSource1
+    TabOrder = 10
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 224
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 11
+  end
+  object DBGrid1: TDBGrid
+    Left = 25
+    Top = 320
+    Width = 817
+    Height = 241
+    DataSource = DataSource1
+    TabOrder = 12
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Button1: TButton
+    Left = 767
+    Top = 14
+    Width = 75
+    Height = 25
+    Caption = 'Salir'
+    TabOrder = 13
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 624
+    Top = 14
+    Width = 137
+    Height = 25
+    Caption = 'Tipo de inventario'
+    TabOrder = 14
+    OnClick = Button2Click
+  end
+  object ComboBox1: TComboBox
+    Left = 272
+    Top = 208
+    Width = 145
+    Height = 21
+    AutoComplete = False
+    TabOrder = 15
+    Text = 'ComboBox1'
+    OnChange = DBEdit9Change
+  end
+  object DBEdit9: TDBEdit
+    Left = 171
+    Top = 283
+    Width = 0
+    Height = 21
+    DataField = 'tipo_inventario'
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 16
+    OnChange = DBEdit9Change
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Cristina A' +
+      'costa\Documents\db inventario\inventario.mdb;Persist Security In' +
+      'fo=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 704
+    Top = 472
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'productos'
+    Left = 464
+    Top = 320
+    object ADOTable1Id: TAutoIncField
+      FieldName = 'Id'
+      ReadOnly = True
+    end
+    object ADOTable1nombre: TWideStringField
+      FieldName = 'nombre'
+      Size = 100
+    end
+    object ADOTable1cantidad: TIntegerField
+      FieldName = 'cantidad'
+    end
+    object ADOTable1unidad_de_medida: TWideStringField
+      FieldName = 'unidad_de_medida'
+    end
+    object ADOTable1stock_min: TIntegerField
+      FieldName = 'stock_min'
+    end
+    object ADOTable1stock_max: TIntegerField
+      FieldName = 'stock_max'
+    end
+    object ADOTable1valor_unitario: TIntegerField
+      FieldName = 'valor_unitario'
+    end
+    object ADOTable1tiempo_de_entraga: TWideStringField
+      FieldName = 'tiempo_de_entraga'
+    end
+    object ADOTable1prioridad: TWideStringField
+      FieldName = 'prioridad'
+    end
+    object ADOTable1tipo_inventario: TWideStringField
+      FieldName = 'tipo_inventario'
+      Size = 50
+    end
+    object ADOTable1observaciones: TWideStringField
+      FieldName = 'observaciones'
+      Size = 100
+    end
+    object ADOTable1descripcion: TWideStringField
+      FieldName = 'descripcion'
+      Size = 100
+    end
+    object ADOTable1fecha_creacion: TDateTimeField
+      FieldName = 'fecha_creacion'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 680
+    Top = 272
+  end
+  object SQLTable1: TSQLTable
+    Left = 432
+    Top = 496
+  end
+  object ADOConnection2: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Cristina A' +
+      'costa\Documents\db inventario\inventario.mdb;Persist Security In' +
+      'fo=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 584
+    Top = 208
+  end
+  object ADOTable2: TADOTable
+    Connection = ADOConnection2
+    CursorType = ctStatic
+    TableName = 'tipo_de_inventario'
+    Left = 480
+    Top = 184
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Cristina A' +
+      'costa\Documents\db inventario\inventario.mdb;Persist Security In' +
+      'fo=False'
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from tipo_de_inventario')
+    Left = 480
+    Top = 248
+    object ADOQuery1Id_tipo: TAutoIncField
+      FieldName = 'Id_tipo'
+      ReadOnly = True
+    end
+    object ADOQuery1nombre_tipo: TWideStringField
+      FieldName = 'nombre_tipo'
+      Size = 100
+    end
+    object ADOQuery1descripcion: TWideStringField
+      FieldName = 'descripcion'
+      Size = 100
+    end
+    object ADOQuery1fecha_creacion: TDateTimeField
+      FieldName = 'fecha_creacion'
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOQuery1
+    Left = 600
+    Top = 272
+  end
+end

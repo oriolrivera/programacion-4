@@ -1,0 +1,57 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask, Data.Win.ADODB;
+
+type
+  TFormTipoInventario = class(TForm)
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    ADOTable1Id_tipo: TAutoIncField;
+    ADOTable1nombre_tipo: TWideStringField;
+    ADOTable1descripcion: TWideStringField;
+    ADOTable1fecha_creacion: TDateTimeField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Productos: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure ProductosClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTipoInventario: TFormTipoInventario;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2;
+
+procedure TFormTipoInventario.Button2Click(Sender: TObject);
+begin
+FormTipoInventario.Close;
+end;
+
+procedure TFormTipoInventario.ProductosClick(Sender: TObject);
+begin
+FormProduct.Show;
+end;
+
+end.

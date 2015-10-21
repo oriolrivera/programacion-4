@@ -1,0 +1,138 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.DBCtrls, Data.Win.ADODB, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids,
+  Data.FMTBcd, Data.SqlExpr;
+
+type
+  TFormProduct = class(TForm)
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    ADOTable1Id: TAutoIncField;
+    ADOTable1nombre: TWideStringField;
+    ADOTable1cantidad: TIntegerField;
+    ADOTable1unidad_de_medida: TWideStringField;
+    ADOTable1stock_min: TIntegerField;
+    ADOTable1stock_max: TIntegerField;
+    ADOTable1valor_unitario: TIntegerField;
+    ADOTable1tiempo_de_entraga: TWideStringField;
+    ADOTable1prioridad: TWideStringField;
+    ADOTable1tipo_inventario: TWideStringField;
+    ADOTable1observaciones: TWideStringField;
+    ADOTable1descripcion: TWideStringField;
+    ADOTable1fecha_creacion: TDateTimeField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    Label10: TLabel;
+    DBEdit10: TDBEdit;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
+    Label12: TLabel;
+    DBEdit12: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    Button2: TButton;
+    SQLTable1: TSQLTable;
+    ADOConnection2: TADOConnection;
+    ADOTable2: TADOTable;
+    ADOQuery1: TADOQuery;
+    ADOQuery1Id_tipo: TAutoIncField;
+    ADOQuery1nombre_tipo: TWideStringField;
+    ADOQuery1descripcion: TWideStringField;
+    ADOQuery1fecha_creacion: TDateTimeField;
+    DataSource2: TDataSource;
+    ComboBox1: TComboBox;
+    DBEdit9: TDBEdit;
+    DBEdit13: TDBEdit;
+    Usuarios: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure DBEdit9Change(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
+    procedure UsuariosClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormProduct: TFormProduct;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3, Unit4;
+
+procedure TFormProduct.Button1Click(Sender: TObject);
+begin
+FormProduct.Close;
+end;
+
+procedure TFormProduct.Button2Click(Sender: TObject);
+begin
+FormTipoInventario.Show;
+end;
+
+procedure TFormProduct.UsuariosClick(Sender: TObject);
+begin
+FormUsuarios.Show;
+end;
+
+procedure TFormProduct.ComboBox1Change(Sender: TObject);
+var i:integer;
+begin
+
+ ADOQuery1.First;
+ with AdoQuery1 do
+begin
+Close;
+SQL.text:= 'select * from tipo_de_inventario';
+Open;
+end;
+
+ for i:=0 to ADOQuery1.RecordCount-1 do
+  begin
+    ComboBox1.Items.Add(ADOQuery1.Fields[1].AsString);
+
+    ADOQuery1.Next;
+  end;
+ //ComboBox1.Clear;
+
+end;
+
+procedure TFormProduct.DBEdit9Change(Sender: TObject);
+
+begin
+
+    DBEdit13.Text:=ComboBox1.Text;
+
+
+end;
+
+
+
+end.

@@ -1,0 +1,169 @@
+object FormUsuarios: TFormUsuarios
+  Left = 0
+  Top = 0
+  Caption = 'Usuarios'
+  ClientHeight = 486
+  ClientWidth = 786
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 8
+    Width = 37
+    Height = 13
+    Caption = 'Nombre'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 56
+    Top = 48
+    Width = 37
+    Height = 13
+    Caption = 'Apellido'
+    FocusControl = DBEdit2
+  end
+  object Label4: TLabel
+    Left = 56
+    Top = 91
+    Width = 25
+    Height = 13
+    Caption = 'Login'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel
+    Left = 56
+    Top = 137
+    Width = 46
+    Height = 13
+    Caption = 'Password'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel
+    Left = 56
+    Top = 183
+    Width = 87
+    Height = 13
+    Caption = 'Fecha de creaci'#243'n'
+    FocusControl = DBEdit6
+  end
+  object DBEdit1: TDBEdit
+    Left = 56
+    Top = 24
+    Width = 264
+    Height = 21
+    DataField = 'nombre'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 56
+    Top = 64
+    Width = 264
+    Height = 21
+    DataField = 'apellido'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBEdit4: TDBEdit
+    Left = 56
+    Top = 110
+    Width = 264
+    Height = 21
+    DataField = 'login'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit5: TDBEdit
+    Left = 56
+    Top = 156
+    Width = 264
+    Height = 21
+    DataField = 'password'
+    DataSource = DataSource1
+    PasswordChar = '*'
+    TabOrder = 3
+  end
+  object DBEdit6: TDBEdit
+    Left = 56
+    Top = 202
+    Width = 264
+    Height = 21
+    DataField = 'fecha_creacion'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 56
+    Top = 248
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 281
+    Width = 770
+    Height = 197
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Cristina A' +
+      'costa\Documents\db inventario\inventario.mdb;Persist Security In' +
+      'fo=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 576
+    Top = 24
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'usuarios'
+    Left = 712
+    Top = 24
+    object ADOTable1Id: TAutoIncField
+      FieldName = 'Id'
+      ReadOnly = True
+    end
+    object ADOTable1nombre: TWideStringField
+      FieldName = 'nombre'
+    end
+    object ADOTable1apellido: TWideStringField
+      FieldName = 'apellido'
+    end
+    object ADOTable1rol_de_usuario: TWideStringField
+      FieldName = 'rol_de_usuario'
+    end
+    object ADOTable1login: TWideStringField
+      FieldName = 'login'
+    end
+    object ADOTable1password: TWideStringField
+      FieldName = 'password'
+    end
+    object ADOTable1fecha_creacion: TDateTimeField
+      FieldName = 'fecha_creacion'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 640
+    Top = 16
+  end
+end
